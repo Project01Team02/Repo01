@@ -1,0 +1,37 @@
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    background-color: azure;
+    font-size:3vw;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    font-style: oblique;
+    font-variation-settings: "wght" 311;
+    color: rgb(8, 8, 8);
+    padding: 1.10vw;
+    text-align: center;
+  }
+
+  a:link { 
+    text-decoration: none; 
+  }
+
+  a{
+    color:black;
+}
+
+  .topnav{
+    word-spacing: 50px;
+    text-align:center;
+    font-family: 'Gambetta', serif;
+    font-size:1.25vw;
+  }
+
+h5{
+    font-family: 'Gambetta', serif;
+    font-size:1.2vw;
+    text-align:center;
+    padding-top:420px;
+}
