@@ -1,0 +1,64 @@
+body {
+    background-color: whitesmoke;
+}
+
+ol {
+  background: #ff9999;
+  padding: 20px;
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+
+ol li {
+  background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
+
+
+h1 {
+    background-color: azure;
+    font-size:3vw;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    font-style: oblique;
+    font-variation-settings: "wght" 311;
+    color: rgb(8, 8, 8);
+    padding: 1.10vw;
+    text-align: center;
+  }
+
+  a:link {
+     text-decoration: none; 
+    }
+    
+  a{
+    color:black;
+}
+  .topnav{
+    word-spacing: 50px;
+    text-align:center;
+    font-family: 'Gambetta', serif;
+    font-size:1.25vw;
+  }
+
+h3{
+  font-family: 'Gambetta', serif;
+}
+
+h5{
+    font-family: 'Gambetta', serif;
+    font-size:1.2vw;
+    text-align:center;
+    padding-top:420px;
+}
