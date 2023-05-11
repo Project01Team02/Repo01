@@ -1,4 +1,4 @@
-## Movie Mixers - Project README 
+    ## Movie Mixers - Project README 
 Project 1 for Bootcamp: Used a CSS framework, successful application on Github Pages, interactive application, manipulated two server side APIs, used client-storage in order to store persistent data.
 
 # Project Name

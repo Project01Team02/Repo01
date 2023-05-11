@@ -76,6 +76,8 @@ h3{
 
 footer{
   color: #fff;
+  background-color: #000;
+  opacity: .8;
   font-family: 'Gambetta', serif;
   font-weight: bold;
   font-style: oblique;
