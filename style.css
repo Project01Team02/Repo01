@@ -116,17 +116,17 @@ img{
     color: red;
     box-shadow: 2px 2px 2px red;
 }
+
 footer{
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  text-align: center;
   color: #fff;
+  background-color: #000;
+  opacity: .8;
   font-family: 'Gambetta', serif;
   font-weight: bold;
   font-style: oblique;
-  font-size: 1.5em;
-  margin-top: 8em;
+  font-size:1.2vw;
+  text-align:center;
+  margin-top:15vh;
   padding: 50px;
 }
 #results {
