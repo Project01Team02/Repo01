@@ -32,6 +32,12 @@ function getDrink(genre){
     if(genre == "Action"){
         randomIndex = Math.floor(Math.random()*actionDrinks.length);
         drink = actionDrinks[randomIndex];
+    }else if(genre == "Comedy"){
+        randomIndex = Math.floor(Math.random()*comedyDrinks.length);
+        drink = comedyDrinks[randomIndex];
+    }else if(genre == "Horror"){
+        randomIndex = Math.floor(Math.random()*horrorDrinks.length);
+        drink = horrorDrinks[randomIndex];
     }else if(genre == "Crime"){
         randomIndex = Math.floor(Math.random()*crimeDrinks.length);
         drink = crimeDrinks[randomIndex];
@@ -50,12 +56,6 @@ function getDrink(genre){
     }else if(genre == "Drama"){
         randomIndex = Math.floor(Math.random()*dramaDrinks.length);
         drink = dramaDrinks[randomIndex];
-    }else if(genre == "Horror"){
-        randomIndex = Math.floor(Math.random()*horrorDrinks.length);
-        drink = horrorDrinks[randomIndex];
-    }else if(genre == "Comedy"){
-        randomIndex = Math.floor(Math.random()*comedyDrinks.length);
-        drink = comedyDrinks[randomIndex];
     }else if(genre == "Musical"){
         randomIndex = Math.floor(Math.random()*musicalDrinks.length);
         drink = musicalDrinks[randomIndex];

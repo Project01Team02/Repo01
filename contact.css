@@ -127,3 +127,13 @@ footer{
  90% { transform: rotate( -10.0deg) } 
  100% { transform: rotate( 0.0deg) }
 }
+
+#drink-up {
+  width: 100vw;
+  margin-top: 20px;
+}
+
+.photo-credit {
+  text-align: right;
+  margin-right: 10px;
+}
