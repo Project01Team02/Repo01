@@ -1,32 +1,13 @@
 body {
-    background-color: whitesmoke;
+    background-color: rgb(73, 83, 94);
+    font-family: 'Gambetta', serif;
+    color: #fff;
+    margin: 0;
 }
-
-ol {
-  background: #ff9999;
-  padding: 20px;
-}
-
-ul {
-  background: #3399ff;
-  padding: 20px;
-}
-
-ol li {
-  background: #ffe5e5;
-  color: darkred;
-  padding: 5px;
-  margin-left: 35px;
-}
-
-ul li {
-  background: #cce5ff;
-  color: darkblue;
-  margin: 5px;
-}
-
 
 h1 {
+  width: 100%;
+  margin-top: 0;
     background-color: azure;
     font-size:3vw;
     text-transform: uppercase;
@@ -37,28 +18,90 @@ h1 {
     padding: 1.10vw;
     text-align: center;
   }
+  li::marker {
+    content: "🍻"
+  }
+
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
 
   a:link {
      text-decoration: none; 
     }
     
   a{
-    color:black;
+    font-size:  5vmin;
+    font-size:  1.50vmax;
+    color: #fff;
+    font-weight: bold;
 }
   .topnav{
     word-spacing: 50px;
     text-align:center;
     font-family: 'Gambetta', serif;
     font-size:1.25vw;
+    padding-top:none;
   }
 
 h3{
   font-family: 'Gambetta', serif;
+  padding-top:50px;
+
+  margin: 2em;
 }
 
-h5{
-    font-family: 'Gambetta', serif;
-    font-size:1.2vw;
-    text-align:center;
-    padding-top:420px;
+footer{
+  color: #fff;
+  font-family: 'Gambetta', serif;
+  font-weight: bold;
+  font-style: oblique;
+  font-size:1.2vw;
+  text-align:center;
+  margin-top:15vh;
+  padding: 50px;
+}
+.glass-1 {
+  animation-name: wave-animation2;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  transform: scale(-1,1);
+}
+.glass-2 {
+  animation-name: wave-animation1;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+@keyframes wave-animation1 {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate( 14.0deg) }
+ 20% { transform: rotate( -8.0deg) }
+ 30% { transform: rotate( 7.0deg) }
+ 40% { transform: rotate( -4.0deg) }
+ 50% { transform: rotate( 10.0deg) }
+ 60% { transform: rotate( -4.0deg) }
+ 70% { transform: rotate( 10.0deg) }
+ 80% { transform: rotate( -8.0deg) }
+ 90% { transform: rotate( 10.0deg) } 
+ 100% { transform: rotate( 0.0deg) }
+}
+@keyframes wave-animation2 {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate( -14.0deg) }
+ 20% { transform: rotate( 8.0deg) }
+ 30% { transform: rotate( -7.0deg) }
+ 40% { transform: rotate( 4.0deg) }
+ 50% { transform: rotate( -10.0deg) }
+ 60% { transform: rotate( 4.0deg) }
+ 70% { transform: rotate( -10.0deg) }
+ 80% { transform: rotate( 8.0deg) }
+ 90% { transform: rotate( -10.0deg) } 
+ 100% { transform: rotate( 0.0deg) }
 }
