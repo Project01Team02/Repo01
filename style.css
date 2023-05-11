@@ -162,6 +162,7 @@ footer{
 }
 #movieImg {
   margin-left: auto;
+  width: 150px;
 }
 .glass-1 {
     animation-name: wave-animation2;
