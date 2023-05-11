@@ -6,15 +6,27 @@ body {
 }
 
 h1 {
-  width: 100%;
-  margin-top: 0;
-    background-color: azure;
-    font-size:3vw;
+  width: 90%;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+    background-color:  #000;
+    font-size: 4em;
     text-transform: uppercase;
     font-family: 'Gambetta', serif;
     font-style: oblique;
-    font-variation-settings: "wght" 311;
-    color: rgb(8, 8, 8);
+    border:10px rgb(247, 219, 149);
+    border-style: dotted ;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gold,
+    3px 3px 6px gold,
+    3px 3px 10px gold,
+    3px 3px 14px gold,
+    3px 3px 18px gold,
+    3px 3px 22px gold;
+    font-weight: bold;
+    color: #FFF;
     padding: 1.10vw;
     text-align: center;
   }
@@ -34,18 +46,26 @@ h1 {
     }
     
   a{
-    font-size:  5vmin;
-    font-size:  1.50vmax;
     color: #fff;
     font-weight: bold;
+    font-size: 1em;
 }
-  .topnav{
-    word-spacing: 50px;
-    text-align:center;
-    font-family: 'Gambetta', serif;
-    font-size:1.25vw;
-    padding-top:none;
-  }
+.topnav{
+  background-color: #000;
+  opacity: 0.8;
+  width: 20%;
+  word-spacing: 50px;
+  text-align:center;
+  font-family: 'Gambetta', serif;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  font-size: 1.25em;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  overflow: auto;
+}
 
 h3{
   font-family: 'Gambetta', serif;
@@ -56,6 +76,8 @@ h3{
 
 footer{
   color: #fff;
+  background-color: #000;
+  opacity: .8;
   font-family: 'Gambetta', serif;
   font-weight: bold;
   font-style: oblique;
@@ -104,4 +126,14 @@ footer{
  80% { transform: rotate( 8.0deg) }
  90% { transform: rotate( -10.0deg) } 
  100% { transform: rotate( 0.0deg) }
+}
+
+#drink-up {
+  width: 100vw;
+  margin-top: 20px;
+}
+
+.photo-credit {
+  text-align: right;
+  margin-right: 10px;
 }

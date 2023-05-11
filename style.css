@@ -1,39 +1,59 @@
 body {
     background-color: rgb(73, 83, 94);
+    font-family: 'Gambetta', serif;
     color: #FFF;
     margin: 0;
 }
 
 .container {
+  float: center;
+    margin-top: 9em;
     width: 100%;
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0;
   }
   
   h1 {
-    width: 100%;
-    margin-top: 0;
-      background-color: azure;
-      font-size:3vw;
+    width: 90%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: center;
+      background-color:  #000;
+      font-size: 4em;
       text-transform: uppercase;
       font-family: 'Gambetta', serif;
       font-style: oblique;
-      font-variation-settings: "wght" 311;
-      color: rgb(8, 8, 8);
+      border:10px rgb(247, 219, 149);
+      border-style: dotted ;
+      border-radius: 5px;
+      box-shadow: 3px 3px 3px gold,
+      3px 3px 6px gold,
+      3px 3px 10px gold,
+      3px 3px 14px gold,
+      3px 3px 18px gold,
+      3px 3px 22px gold;
+      font-weight: bold;
+      color: #FFF;
       padding: 1.10vw;
       text-align: center;
     }
-  h2{
-
+  p {
+    width: 90%;
+    font-size: 2em;
     color:white;
     font-family: 'Gambetta', serif;
     text-align:center;
-    padding-top:25px;
     display:flex;
-    margin: 2em;
+    border:1px azure solid;
+    margin-top: 4lvb;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
 }
 h3{
     color: black;
@@ -43,8 +63,7 @@ h3{
 }
 
 a{  
-    font-size:  5vmin;
-    font-size:  1.50vmax;
+    font-size:  1em;
     color:#FFF;
     font-weight: bold;
 }
@@ -52,16 +71,30 @@ img{
     width: 100%
 }
 
-  .topnav{
-    word-spacing: 50px;
-    text-align:center;
-    font-family: 'Gambetta', serif;
-    font-size:1.25vw;
-  }
+.topnav{
+  background-color: #000;
+  opacity: 0.8;
+  width: 20%;
+  word-spacing: 50px;
+  text-align:center;
+  font-family: 'Gambetta', serif;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  font-size: 1.25em;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  overflow: auto;
+}
+#resultsDiv {
+    margin-top: 1em;
+}
 #title {
-    margin-top: 6em;
+  display: block;
+    margin-top: 5em;
     color: #FFF;
-    font-size: 1.75vw;
+    font-size: 3lvb;
 }
 #movieInput {
     width: 20em;
@@ -74,43 +107,62 @@ img{
     font-family: 'Gambetta', serif;
     text-align:center;
 
-
 }
 #submit {
     margin-top: 2em;
-    margin-bottom: 2em;
 }
 #submit:hover {
     background-color: white;
     color: red;
     box-shadow: 2px 2px 2px red;
 }
-footer{
-    color: #fff;
-    font-family: 'Gambetta', serif;
-    font-weight: bold;
-    font-style: oblique;
-    font-size:1.2vw;
-    text-align:center;
-    margin-top:25vh;
-    padding: 50px;
 
+footer{
+  color: #fff;
+  background-color: #000;
+  opacity: .8;
+  font-family: 'Gambetta', serif;
+  font-weight: bold;
+  font-style: oblique;
+  font-size:1.2vw;
+  text-align:center;
+  margin-top:15vh;
+  padding: 50px;
 }
 #results {
-    flex-direction: row;
-    background-color: #FFF;
-    border-radius: 5px;
-    display: flex;
-    padding: 20px;
-    margin-top: 3em;
+  color:white;
+  flex-direction: row;
+  border-radius: 5px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.btn {
+  color: white;
+  font-size: 1.25em;
 }
 #movieList {
-    list-style: none;
-    color: #fff;
+  list-style: none;
+  color: #fff;
+  margin-bottom: 15em;
  
 }
 #drinkTitle {
+    color:#FFF;
     text-align: center;
+}
+#movieTitle {
+  color: #FFF;
+  text-align: center;
+}
+#drinkImg {
+  margin-left: 1em;
+}
+#movieImg {
+  margin-left: auto;
+  width: 150px;
 }
 .glass-1 {
     animation-name: wave-animation2;

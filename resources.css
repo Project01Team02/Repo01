@@ -1,19 +1,33 @@
 body {
+  background-image: url(images/drinks.jpg);
+  background-repeat:space;
   background-color: rgb(73, 83, 94);
   color:white;
   margin:0;
 }
 
 h1 {
-  width: 100%;
-  margin-top: 0;
-    background-color: azure;
-    font-size:3vw;
+  width: 90%;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+    background-color:  #000;
+    font-size: 4em;
     text-transform: uppercase;
     font-family: 'Gambetta', serif;
     font-style: oblique;
-    font-variation-settings: "wght" 311;
-    color: rgb(8, 8, 8);
+    border:10px rgb(247, 219, 149);
+    border-style: dotted ;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gold,
+    3px 3px 6px gold,
+    3px 3px 10px gold,
+    3px 3px 14px gold,
+    3px 3px 18px gold,
+    3px 3px 22px gold;
+    font-weight: bold;
+    color: #FFF;
     padding: 1.10vw;
     text-align: center;
   }
@@ -30,33 +44,53 @@ a:hover {
     font-weight: bold;
   }
 ul{
+  background-color: #000;
+  width: 40%;
+  opacity: .8;
   line-height: 2em;
   list-style: none;
   text-align: center;
   font-family: 'Gambetta', serif;
+  border-radius: 5px;
   padding:20px;
   font-size: 2.25vw;
   line-height: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  overflow: auto;
 }
 
-  .topnav{
-    word-spacing: 50px;
-    text-align:center;
-    font-family: 'Gambetta', serif;
-    font-size:1.25vw;
-    color:white;
-  }
+.topnav{
+  background-color: #000;
+  opacity: 0.8;
+  width: 20%;
+  word-spacing: 50px;
+  text-align:center;
+  font-family: 'Gambetta', serif;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  font-size: 1.5em;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+}
 
   footer{
+    background-color: #000;
     color: #fff;
+    opacity: .8;
+    width: 100%;
     font-family: 'Gambetta', serif;
     font-weight: bold;
     font-style: oblique;
     font-size:1.2vw;
     text-align:center;
     margin-top:15vh;
+    margin-bottom: 0;
     padding: 50px;
-
+    position: fixed;
 }
 .glass-1 {
   animation-name: wave-animation2;
