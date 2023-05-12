@@ -3,10 +3,39 @@ body {
   background-repeat:space;
   background-color: rgb(73, 83, 94);
   color:white;
-  margin:0;
 }
 
-h1 {
+h1{
+  width: 20%;
+  text-align:center;
+  font-family: 'Gambetta', serif;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  font-size: 2.25em;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  overflow: auto; 
+}
+
+.topnav{
+  background-color: #000;
+  opacity: 0.8;
+  width: 20%;
+  word-spacing: 50px;
+  text-align:center;
+  font-family: 'Gambetta', serif;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  font-size: 1.25em;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  overflow: auto;
+}
+.banner {
   width: 90%;
   margin-top: 1em;
   margin-left: auto;
@@ -53,44 +82,32 @@ ul{
   font-family: 'Gambetta', serif;
   border-radius: 5px;
   padding:20px;
-  font-size: 2.25vw;
-  line-height: 2em;
+  font-size: 2.0vw;
   margin-left: auto;
   margin-right: auto;
   vertical-align: center;
   overflow: auto;
 }
 
-.topnav{
-  background-color: #000;
-  opacity: 0.8;
-  width: 20%;
-  word-spacing: 50px;
+p{
+  color:white;
+  font-size:1.5vw;
   text-align:center;
-  font-family: 'Gambetta', serif;
-  border-radius: 5px;
-  margin-top: 1.5em;
-  font-size: 1.5em;
-  padding: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  vertical-align: center;
+  background-color:#000;
+  opacity:0.8;
 }
 
-  footer{
-    background-color: #000;
-    color: #fff;
-    opacity: .8;
-    width: 100%;
-    font-family: 'Gambetta', serif;
-    font-weight: bold;
-    font-style: oblique;
-    font-size:1.2vw;
-    text-align:center;
-    margin-top:15vh;
-    margin-bottom: 0;
-    padding: 50px;
-    position: fixed;
+footer{
+  color: #fff;
+  background-color: #000;
+  opacity: .8;
+  font-family: 'Gambetta', serif;
+  font-weight: bold;
+  font-style: oblique;
+  font-size:1.2vw;
+  text-align:center;
+  margin-top:15vh;
+  padding: 50px;
 }
 .glass-1 {
   animation-name: wave-animation2;

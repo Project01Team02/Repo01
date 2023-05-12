@@ -2,7 +2,7 @@
 Project 1 for Bootcamp: Used a CSS framework, successful application on Github Pages, interactive application, manipulated two server side APIs, used client-storage in order to store persistent data.
 
 # Project Name
-MOVIE MIXERS 
+MOVIE MIXERS - MJ came up with this name when we were initially trying to create 
 
 # Description
 MOVIE MIXERS is a web application that links to two server side APIs and uses client-storage to store data for the user in order to give a reccommendation about a movie and a drink to go with. 
@@ -11,8 +11,8 @@ MOVIE MIXERS is a web application that links to two server side APIs and uses cl
 [INCLUDE SCREENSHOTS]
 
 # Installation
-To launch the deployed applicatinon, click here: _________________.
-To edit and look at the code closer, first install vscode (https://code.visualstudio.com/download), then do GitHub clone, and will launch the application. 
+- To launch the deployed applicatinon, click here: _________________.
+- To edit and look at the code closer, first install vscode (https://code.visualstudio.com/download), then do GitHub clone, and will launch the application. 
 
 
 # Usage
@@ -24,6 +24,7 @@ Tell people where they can go to for help. It can be any combination of an issue
 
 # Authors and acknowledgment
 Christopher Clair, Peter Conenna, Edward Friedman, Andrew Forbes - developers.
+MJ - for name of user. 
 
 # License
 For open source projects, say how it is licensed.

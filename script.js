@@ -5,17 +5,23 @@ var movieInputEl = document.querySelector('#movieInput');
 var movieForm = document.querySelector('#movieForm');
 var resultsDiv = document.querySelector("#results")
 
-const horrorDrinks = ['Bloody Punch', 'Corpse Reviver', 'Freddy Krueger', 'Grim Reaper', 'Halloween Punch'];
+var searchHistory = JSON.parse(localStorage.getItem("searches"))
+if(searchHistory == null){
+    searchHistory = [];
+    localStorage.setItem("searches", JSON.stringify(searchHistory))
+}
+
+const horrorDrinks = ['Bloody Punch', 'Corpse Reviver', 'Freddy Kruger', 'Grim Reaper', 'Halloween Punch'];
 
 const actionDrinks = ['Bounty Hunter','Buccaneer','Miami Vice','Vesper Martini'];
 
 const comedyDrinks = ['A Piece of Ass', 'Arizona Antifreeze', 'Brain Fart', 'Damned If You Do', 'Happy Skipper', 'Slippery Nipple'];
 
-const crimeDrinks = ['Death in the Afternoon', 'Duchamp\'s Punch', 'Godfather', 'Shotgun'];
+const crimeDrinks = ['Death in the Afternoon', 'Duchamp\'s Punch', 'Godfather', 'Shot-gun'];
 
 const adventureDrinks = ['A Day at the Beach','Alice In Wonderland','Atlantic Sun','Blue Lagoon','Gideon\'s Green Dinosaur','Grizzly Bear','Jewel of the Nile','Waikiki Beachcomber'];
 
-const dramaDrinks = ['Absolutly Screwed Up','Affair','Bleeding Surgeon','Bruised Heart','Butterfly Effect','Gentlemen\'s Club','Hemingway Special']
+const dramaDrinks = ['Absolutly Screwed Up','Affair','Bleeding Surgeon','Bruised Heart','Butterfly Effect','Gentleman\'s Club','Hemingway Special']
 
 const romanceDrinks = ['Between the Sheets', 'Cosmopolitan', 'Foxy Lady', 'Screaming Orgasm', 'Sex on the Beach'];
 
@@ -78,6 +84,17 @@ function getDrink(genre){
             drinkImg.setAttribute("id","drinkImg");
             drinkImg.setAttribute("src",`${data.drinks[0].strDrinkThumb}/preview`);
             drinkDiv.appendChild(drinkImg);
+            var desc = document.createElement('p');
+            desc.setAttribute("id", "drinkDesc");
+            desc.textContent = `To make this drink start with ${data.drinks[0].strIngredient1}.`
+            drinkDiv.appendChild(desc);
+            var drinkLink = document.createElement('a');
+            drinkLink.setAttribute("id","drinkLink");
+            drinkLink.setAttribute("href",`https://www.thecocktaildb.com/drink/${data.drinks[0].idDrink}`)
+            drinkLink.setAttribute("target",`_blank`)
+            drinkLink.textContent = "Click the link for full instuctions.";
+            drinkDiv.appendChild(drinkLink);
+
             // add drink ingredient 
         })
     })
@@ -86,6 +103,7 @@ function getDrink(genre){
 
 function getMovie(event) {
     event.preventDefault();
+    addToHistory(movieInputEl.value)
     var url =`https://www.omdbapi.com/?apikey=333546da&s=${movieInputEl.value}&type=movie`;
     fetch(url)
     .then(function(response){
@@ -95,14 +113,29 @@ function getMovie(event) {
             destroyList();
             clearDrink();
             addMovieTitle(data.Search) //array
+            
         })
     })
     // Clears the search form upon submit
     movieForm.reset();
-    
-
-    
 }
+
+function getMovieFromHistory() {
+    // button
+    var url =`https://www.omdbapi.com/?apikey=333546da&s=${btn.textContent}&type=movie`;
+    fetch(url)
+    .then(function(response){
+        response.json().then(function(data){
+            destroyList();
+            clearDrink();
+            addMovieTitle(data.Search) //array
+            
+        })
+    })
+    // Clears the search form upon submit
+    movieForm.reset();
+}
+
 function addMovieTitle(movies){
     var movieList = document.createElement("ul")
     movieList.setAttribute("id", "movieList")
@@ -111,7 +144,6 @@ function addMovieTitle(movies){
         var li = document.createElement("li")
         var btn = document.createElement("button")
         btn.textContent = `${movies[i].Title} (${movies[i].Year})`;
-        btn.setAttribute("class","btn")
         btn.addEventListener("click", getMovieInfo)
         movieList.appendChild(li)
         li.appendChild(btn)
@@ -135,10 +167,15 @@ function clearDrink(){
     if (drinkTitle){drinkTitle.remove()}
     var drinkImg = document.querySelector('#drinkImg');
     if (drinkImg){drinkImg.remove()}
+    var drinkDesc = document.querySelector('#drinkDesc');
+    if (drinkDesc){drinkDesc.remove()}
+    var drinkLink = document.querySelector('#drinkLink');
+    if (drinkLink){drinkLink.remove()}
     var movieTitle = document.querySelector('#movieTitle');
     if (movieTitle){movieTitle.remove()}
     var movieImg = document.querySelector('#movieImg');
     if (movieImg){movieImg.remove()}
+
 }
 
 
@@ -183,17 +220,19 @@ function clearDrink(){
     })
 }
 
+function addToHistory(name){
+    var btn = document.createElement("button")
+    btn.textContent = name;
+    btn.addEventListener("click", getMovieFromHistory)
+    var searchHistoryDiv = document.querySelector("#searchHistoryDiv")
+    searchHistoryDiv.appendChild(btn)
+    searchHistory.push({'movieName':name})
+    localStorage.setItem("searches", JSON.stringify(searchHistory))
+}
+
     
 
-    /* CHRIS ASKS: AFTER THE TRIM ABOVE, DOES THIS SEQUENCE MAKE SENSE?:
-    
-    Use genre info from selected film, randomly select a drink from the drink category that we tie to said genre. Perhaps we have to create an array of a few drinks for each category?
-
-    Display movie title with poster image on page, with drink pairing (and drink thumbnail image?) alongside/underneath
-    
-    Drink thumbnails: Add /preview to the end of the cocktail image URL. For instance, /images/media/drink/vrwquq1478252802.jpg/preview (100x100 pixels)
-    */
-
+   
 
 
   

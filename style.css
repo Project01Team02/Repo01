@@ -5,19 +5,18 @@ body {
     margin: 0;
 }
 
-.container {
-  float: center;
-    margin-top: 9em;
+.container-div{
+    margin-top: 1em;
     width: 100%;
-    height: 50vh;
+    /* height: 50vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     padding: 0;
   }
   
-  h1 {
+  #banner {
     width: 90%;
     margin-top: 1em;
     margin-left: auto;
@@ -42,7 +41,7 @@ body {
       padding: 1.10vw;
       text-align: center;
     }
-  p {
+  .desc {
     width: 90%;
     font-size: 2em;
     color:white;
@@ -74,7 +73,7 @@ img{
 .topnav{
   background-color: #000;
   opacity: 0.8;
-  width: 20%;
+  width: 33%;
   word-spacing: 50px;
   text-align:center;
   font-family: 'Gambetta', serif;
@@ -87,12 +86,12 @@ img{
   vertical-align: center;
   overflow: auto;
 }
-#resultsDiv {
+#formDiv {
     margin-top: 1em;
 }
 #title {
   display: block;
-    margin-top: 5em;
+    margin-top: .5em;
     color: #FFF;
     font-size: 3lvb;
 }
@@ -100,16 +99,30 @@ img{
     width: 20em;
     text-align: center;
     line-height: 1;
+    width: 25em;
+    height: 2.25em;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: center;
 }
 #movieForm {
     display: flex;
     justify-content: center;
     font-family: 'Gambetta', serif;
     text-align:center;
+    
 
 }
 #submit {
-    margin-top: 2em;
+  background-color: red;
+  color:#FFF;
+    margin-top: em;
+    width: 10em;
+    height: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: center;
+    border-radius: 5px;
 }
 #submit:hover {
     background-color: white;
@@ -146,7 +159,7 @@ footer{
 #movieList {
   list-style: none;
   color: #fff;
-  margin-bottom: 15em;
+  margin-bottom: 10px;
  
 }
 #drinkTitle {
@@ -159,6 +172,7 @@ footer{
 }
 #drinkImg {
   margin-left: 1em;
+  /* height: fit-content; */
 }
 #movieImg {
   margin-left: auto;
