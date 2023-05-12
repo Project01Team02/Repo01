@@ -70,8 +70,18 @@ h1 {
 h3{
   font-family: 'Gambetta', serif;
   padding-top:50px;
+  width:50%;
+  text-align:center;
+  font-size:1.1vw;
+  margin: auto;
+}
 
-  margin: 2em;
+table{
+ color:rgb(255, 255, 255);
+ text-align:center;
+ margin:auto;
+ width:50%;
+ font-size:1.5vw;
 }
 
 footer{
@@ -129,11 +139,28 @@ footer{
 }
 
 #drink-up {
-  width: 100vw;
+  display: flex;
+  width: 90%;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .photo-credit {
   text-align: right;
-  margin-right: 10px;
+  margin-right: 75px;
 }
+
+table, th, td {
+  border:1px solid rgb(255, 255, 255);
+}
+
+/* possible to make the image of the movie come up and the drink so its like
+/* [PIC] | [PIC] BOX format? 
+/* https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Fill_a_box_with_an_image 
+/* movie posters 
+/* DD= https://m.media-amazon.com/images/M/MV5BZjZlZDlkYTktMmU1My00ZDBiLWFlNjEtYTBhNjVhOTM4ZjJjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg 
+/* LIT = https://www.liquor.com/thmb/oUB-ms9XWSaAhG3-YEcmx4beXXs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2019__03__14090749__Long-Island-Iced-Tea-720x720-article-272623f47e80457594178a552f708068.jpg
+/* create a table --> within table, images placed 
+/* set images to 300x400 
