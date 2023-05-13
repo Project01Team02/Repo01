@@ -5,10 +5,51 @@ var movieInputEl = document.querySelector('#movieInput');
 var movieForm = document.querySelector('#movieForm');
 var resultsDiv = document.querySelector("#results")
 
-var searchHistory = JSON.parse(localStorage.getItem("searches"))
-if(searchHistory == null){
-    searchHistory = [];
-    localStorage.setItem("searches", JSON.stringify(searchHistory))
+function readSearchesFromStorage() {
+    var movies = localStorage.getItem('searches');
+    if (movies) {
+      movies = JSON.parse(movies);
+    } else {
+      movies = [];
+    }
+    console.log(movies);
+    return movies;
+  }
+  
+  // saves the array of searched movie terms to local storage 
+  function saveSearchesToStorage(movies) {
+    localStorage.setItem('searches', JSON.stringify(movies));
+  }
+
+function addHistoryToPage() {
+ 
+    var movies = readSearchesFromStorage();
+    var searchHistoryDiv = document.querySelector("#searchHistoryDiv")
+  
+    for (var i = 0; i < movies.length; i++) {
+      var newMovie = movies[i];
+      var btn = document.createElement('button');
+      btn.innerHTML = newMovie;    
+      searchHistoryDiv.appendChild(btn)
+    }
+  }
+
+  function getMovieFromHistory(event) {
+    event.preventDefault();
+    var movieHistoryName = event.target.textContent;
+    console.log(movieHistoryName);
+    var url =`https://www.omdbapi.com/?apikey=333546da&s=${movieHistoryName}&type=movie`;
+    fetch(url)
+    .then(function(response){
+        response.json().then(function(data){
+            destroyList();
+            clearDrink();
+            addMovieTitle(data.Search) //array
+            
+        })
+    })
+    // Clears the search form upon submit
+    movieForm.reset();
 }
 
 const horrorDrinks = ['Bloody Punch', 'Corpse Reviver', 'Freddy Kruger', 'Grim Reaper', 'Halloween Punch'];
@@ -103,7 +144,18 @@ function getDrink(genre){
 
 function getMovie(event) {
     event.preventDefault();
-    addToHistory(movieInputEl.value)
+    var movieName = document.querySelector('#movieInput').value.trim();
+    console.log(movieName);
+  
+    if (!movieName) {
+      console.error("You must enter a search term!");
+      return;
+    }
+    var movies = readSearchesFromStorage();
+    movies.unshift(movieName);
+    saveSearchesToStorage(movies);
+    searchHistoryDiv.innerHTML = '';
+      addHistoryToPage();
     var url =`https://www.omdbapi.com/?apikey=333546da&s=${movieInputEl.value}&type=movie`;
     fetch(url)
     .then(function(response){
@@ -120,21 +172,6 @@ function getMovie(event) {
     movieForm.reset();
 }
 
-function getMovieFromHistory() {
-    // button
-    var url =`https://www.omdbapi.com/?apikey=333546da&s=${btn.textContent}&type=movie`;
-    fetch(url)
-    .then(function(response){
-        response.json().then(function(data){
-            destroyList();
-            clearDrink();
-            addMovieTitle(data.Search) //array
-            
-        })
-    })
-    // Clears the search form upon submit
-    movieForm.reset();
-}
 
 function addMovieTitle(movies){
     var movieList = document.createElement("ul")
@@ -220,22 +257,9 @@ function clearDrink(){
     })
 }
 
-function addToHistory(name){
-    var btn = document.createElement("button")
-    btn.textContent = name;
-    btn.addEventListener("click", getMovieFromHistory)
-    var searchHistoryDiv = document.querySelector("#searchHistoryDiv")
-    searchHistoryDiv.appendChild(btn)
-    searchHistory.push({'movieName':name})
-    localStorage.setItem("searches", JSON.stringify(searchHistory))
-}
-
-    
-
-   
-
-
+// Prints existing search history on initial page load   
+addHistoryToPage();
   
 movieForm.addEventListener("submit",getMovie);
 
-
+searchHistoryDiv.addEventListener('click', getMovieFromHistory);
