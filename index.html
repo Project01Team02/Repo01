@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Homepage</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
-        
-    </head>
-    <body>
-    <h1 id="banner">🍿Movie Mixers<span class="glass-1">🍸</span><span class="glass-2">🍺</span></h1>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Homepage</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
+  </head>
+  <body>
+    <h1 id="banner">
+      🍿Movie Mixers<span class="glass-1">🍸</span
+      ><span class="glass-2">🍺</span>
+    </h1>
     <div class="topnav">
-        <a class="activenavbar" href="index.html">Home</a>
-        <a href="contact.html">Contact</a>
-        <a href="resources.html">Resources</a>
+      <a class="activenavbar" href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="resources.html">Resources</a>
+    </div>
+    <p class="desc">
+      It&rsquo;s movie night. And you&rsquo;re thirsty. But you&rsquo;re not
+      sure what drink would go well with your chosen film. <br /><br />No
+      worries. Movie Mixers has you covered. Enter a movie title below, select
+      from the list of possibilities, and we&rsquo;ll suggest a cocktail to
+      enjoy during the show.
+    </p>
+    <div class="container-div">
+      <form id="movieForm">
+        <div id="formDiv">
+          <label for="MovieInput" id="title">Movie Title</label>
+          <input
+            type="text"
+            id="movieInput"
+            placeholder="Enter your movie title..."
+          />
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+      <div id="results">
+        <div id="movieDiv"></div>
+        <div id="drinkDiv"></div>
       </div>
-      <p class="desc">It&rsquo;s movie night. And you&rsquo;re thirsty. But you&rsquo;re not sure what drink would go well with your chosen film. <br><br>No worries. Movie Mixers has you covered. Enter a movie title below, select from the list of possibilities, and we&rsquo;ll suggest a cocktail to enjoy during the show.</p>
-      <div class="container-div">
-        <form id="movieForm">
-            <div id="formDiv">
-              <label for="MovieInput" id="title">Movie Title</label>
-              <input type="text"  id="movieInput" placeholder="Enter your movie title...">
-            <button type="submit" id="submit">Submit</button>
-          </div>
-        </form>
-          <div id="results">
-            <div id="movieDiv"></div>
-            <div id="drinkDiv"></div>
-          </div>
-          <div id="searchHistoryTitleDiv">
-            <h4>Your previous movie searches:</h4>
-          </div>
-          <div id="searchHistoryDiv">
-          </div>
+      <div id="searchHistoryTitleDiv">
+        <h4>Your previous movie searches:</h4>
+      </div>
+      <div id="searchHistoryDiv"></div>
     </div>
     <footer>
-    </br>
-    Created by: Christopher Clair, Peter Conenna, Edward Friedman, Andrew Forbes
-    <br>
-    </br>&copy; May 2023 for Full Stack Web Development Bootcamp
-    
+      <br />
+      Created by: Christopher Clair, Peter Conenna, Edward Friedman, Andrew
+      Forbes
+      <br />
+      <br />&copy; May 2023 for Full Stack Web Development Bootcamp
     </footer>
-        <script src="script.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        
-    </body>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </body>
 </html>
