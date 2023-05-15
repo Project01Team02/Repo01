@@ -52,7 +52,7 @@ function addHistoryToPage() {
     movieForm.reset();
 }
 
-const horrorDrinks = ['Bloody Punch', 'Corpse Reviver', 'Freddy Kruger', 'Grim Reaper', 'Halloween Punch'];
+const horrorDrinks = ['Bloody Punch', 'Corpse Reviver', 'Freddy Kruger', 'Grim Reaper', 'Holloween Punch'];
 
 const actionDrinks = ['Bounty Hunter','Buccaneer','Miami Vice','Vesper Martini'];
 
@@ -259,7 +259,9 @@ function clearDrink(){
 
 // Prints existing search history on initial page load   
 addHistoryToPage();
-  
+
+// event listener for the search button
 movieForm.addEventListener("submit",getMovie);
 
+// event listener for clicks on the search history entries
 searchHistoryDiv.addEventListener('click', getMovieFromHistory);

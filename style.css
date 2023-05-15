@@ -178,6 +178,19 @@ footer{
   margin-left: auto;
   width: 150px;
 }
+#searchHistoryTitleDiv {
+  margin-left:auto;
+  margin-right: auto;
+  vertical-align: center;
+}
+#searchHistoryDiv button {
+  display: block;
+  font-size:large;
+  margin-bottom: 1em;
+  margin-left:auto;
+  margin-right: auto;
+  vertical-align: center;
+}
 .glass-1 {
     animation-name: wave-animation2;
     animation-duration: 2.5s;
