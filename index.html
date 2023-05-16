@@ -19,7 +19,7 @@
       <a href="contact.html">Contact</a>
       <a href="resources.html">Resources</a>
     </div>
-    <p class="desc">
+    <p class="desc" id="desc" style="display: block">
       It&rsquo;s movie night. And you&rsquo;re thirsty. But you&rsquo;re not
       sure what drink would go well with your chosen film. <br /><br />No
       worries. Movie Mixers has you covered. Enter a movie title below, select
@@ -29,21 +29,22 @@
     <div class="container-div">
       <form id="movieForm">
         <div id="formDiv" >
-          <label for="MovieInput" id="title" class="mb-8">What are we watching?</label>
+          <label for="MovieInput" style="display: block" id="title" class="mb-8">What are we watching?</label>
           <input
             type="text"
             id="movieInput"
             class="mb-8 text-black rounded-md"
             placeholder="Enter your movie title..."
           />
-          <button type="submit" id="submit" class="text-lg">Submit</button>
+          <!-- added style display targeting the desc Div in order to hide it on submit of movie search -->
+          <button type="submit" id="submit" class="text-lg" onclick="document.getElementById('desc').style.display = 'none' ;"  >Submit</button> 
         </div>
       </form>
       <div id="results">
         <div id="movieDiv"></div>
         <div id="drinkDiv"></div>
       </div>
-      <div id="recipeDiv"></div>
+      <div id="recipeDiv" style="display: none"></div>
       <div id="searchHistoryTitleDiv" class="mb-8">
         <p class="text-3xl">Your previous movie searches (click the name to search again):</p>
       </div>

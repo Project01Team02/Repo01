@@ -3,7 +3,8 @@
 // Create constant arrays of drinks (gathered via Cocktail Database api) for each genre? Perhaps 3 to 5 options per array?
 var movieInputEl = document.querySelector('#movieInput');
 var movieForm = document.querySelector('#movieForm');
-var resultsDiv = document.querySelector("#results")
+var resultsDiv = document.querySelector("#results");
+
 
 function readSearchesFromStorage() {
     var movies = localStorage.getItem('searches');
@@ -143,6 +144,8 @@ function getDetails(data){
     var instructions = arr.strInstructions;
     var fullIngredients = "";
     var recipeDiv = document.querySelector("#recipeDiv");
+    //added style display for hiding recipe div until it's called
+    recipeDiv.style.display = 'block';
     for(var i = 1; i <= 15; i++){
         ingredient = `strIngredient${i}`
         measure = `strMeasure${i}`
@@ -171,10 +174,7 @@ function getDetails(data){
     recipeDiv.appendChild(ingr)
     recipeDiv.appendChild(ins);
 
-
-
 }
-
 function getMovie(event) {
     event.preventDefault();
     var movieName = document.querySelector('#movieInput').value.trim();
@@ -184,6 +184,7 @@ function getMovie(event) {
       console.error("You must enter a search term!");
       return;
     }
+    
     var movies = readSearchesFromStorage();
     movies.unshift(movieName);
     saveSearchesToStorage(movies);
@@ -247,8 +248,9 @@ function clearDrink(){
     if (ins){ins.remove()}
     var ingr = document.querySelector('#ingr');
     if (ingr){ingr.remove()}
-
+    
 }
+
 
 
   function getMovieInfo(event){
@@ -276,6 +278,7 @@ function clearDrink(){
             movieImg.setAttribute("id","movieImg");
             movieImg.setAttribute("src",`${data.Poster}`);
             movieDiv.appendChild(movieImg);
+            
 
             var genres = data.Genre;
             var genresArray = genres.split(',');
@@ -287,6 +290,7 @@ function clearDrink(){
             console.log(randomGenre)
             
             getDrink(randomGenre);
+           
 
         })
     })
