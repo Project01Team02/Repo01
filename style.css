@@ -170,25 +170,67 @@ footer{
 }
 /* added border and separation of the drinkDiv and movieDiv to add description of both after search */
 #drinkDiv {
+  background-color: #000;
   width: 50%;
   margin-left: 10%;
   margin-right: 10%;
   margin-left: auto;
   vertical-align: center;
- border: 4px inset goldenrod;
+ border: 4px inset rgb(250, 79, 107);
+ border-radius: 10px 10px 5px 5px;
 }
 #movieDiv {
+  background-color: #000;
   width: 50%;
   margin-left: 10%;
   margin-right: 10%;
   vertical-align: center;
-  border: 4px inset goldenrod;
+  border: 4px inset gold;
+  border-radius: 10px 10px 5px 5px;
 }
-#drinkTitle, #movieTitle {
-    color: #000;
-    background-color: #fff;
+#movieTitle{
+    background-color: #000;
     text-align: center;
     font-size: 150%;
+    border:10px rgb(243, 230, 199);
+    border-style: dotted ;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 3px 3px 3px gold,
+    3px 3px 6px gold,
+    3px 3px 10px gold,
+    3px 3px 14px gold,
+    3px 3px 18px gold,
+    3px 3px 18px gold,
+    3px 3px 18px gold,
+    3px 3px 22px gold;
+    font-weight: bold;
+    color: #FFF;
+    padding: .5em;
+    text-align: center;
+}
+#drinkTitle {
+  background-color: #000;
+  text-align: center;
+  font-size: 150%;
+  border:10px rgb(247, 157, 172); 
+  border-style:double;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 3px 3px 3px rgb(250, 79, 107),
+  3px 3px 6px rgb(250, 79, 107),
+  3px 3px 10px rgb(250, 79, 107),
+  3px 3px 14px rgb(250, 79, 107),
+  3px 3px 18px rgb(250, 79, 107),
+  3px 3px 18px rgb(250, 79, 107),
+  3px 3px 18px rgb(250, 79, 107),
+  3px 3px 22px rgb(250, 79, 107);
+  font-weight: bold;
+  color: rgb(255, 244, 246);
+  text-shadow: 1px 1px rgb(250, 79, 107),
+  1px 1px rgb(250, 79, 107),
+  1px 1px rgb(250, 79, 107),
+  1px 1px rgb(250, 79, 107);
+  padding: .5em;
+  text-align: center;
 }
 #drinkImg {
   width: 45%;
@@ -220,7 +262,7 @@ footer{
   padding-right: em;
   margin-right: .5em;
   margin-bottom: 1em;
-  border: 3px inset goldenrod;
+  border: 3px inset rgb(179, 181, 182);
   border-radius: 5px;
 }
 #searchHistoryDiv button:hover {
@@ -229,14 +271,15 @@ footer{
 }
 #recipeDiv {
   width: 40%;
+  opacity: .5;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
   margin-bottom: 2em;
   vertical-align: center;
-  color: whitesmoke;
-  background-color: rgb(73, 83, 94);
-  border: 4px goldenrod inset;
+  color: #FFF;
+  background-color: rgb(214, 224, 235);
+  border: 4px rgb(187, 186, 184) inset;
   border-radius: 5px;
   padding-top: 1em;
   padding-bottom: 1em;
