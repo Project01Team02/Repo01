@@ -54,7 +54,7 @@ function addHistoryToPage() {
 
 const horrorDrinks = ['Bloody Punch', 'Corpse Reviver', 'Freddy Kruger', 'Grim Reaper', 'Holloween Punch'];
 
-const actionDrinks = ['Bounty Hunter','Buccaneer','Miami Vice','Vesper Martini'];
+const actionDrinks = ['Bounty Hunter','Buccaneer','Miami Vice','Vesper'];
 
 const comedyDrinks = ['A Piece of Ass', 'Arizona Antifreeze', 'Brain Fart', 'Damned If You Do', 'Happy Skipper', 'Slippery Nipple'];
 
@@ -125,30 +125,53 @@ function getDrink(genre){
             drinkImg.setAttribute("id","drinkImg");
             drinkImg.setAttribute("src",`${data.drinks[0].strDrinkThumb}/preview`);
             drinkDiv.appendChild(drinkImg);
-            var desc = document.createElement('p');
-            desc.setAttribute("id", "drinkDesc");
-            desc.textContent = `To make this drink start with ${data.drinks[0].strIngredient1}.`
-            drinkDiv.appendChild(desc);
-            var drinkLink = document.createElement('a');
-            drinkLink.setAttribute("id","drinkLink");
-            // getDetails(data)
-            drinkLink.setAttribute("href",`https://www.thecocktaildb.com/drink/${data.drinks[0].idDrink}`)
-            drinkLink.setAttribute("target",`_blank`)
-            drinkLink.textContent = "Click the link for full instuctions.";
-            drinkDiv.appendChild(drinkLink);
+           
+            getDetails(data)
+          
 
-            // add drink ingredient 
+            
         })
     })
 }
 
 function getDetails(data){
-    arr = data.drinks;
-    ingredient = `strIngredient`
+    var arr = data.drinks[0];
+    var ingredient = `strIngredient`
+    var measure = `strMeasure`
+    var ingredients = [] 
+    var measurements = []
+    var instructions = arr.strInstructions;
+    var fullIngredients = "";
+    var recipeDiv = document.querySelector("#recipeDiv");
     for(var i = 1; i <= 15; i++){
         ingredient = `strIngredient${i}`
-        console.log(ingredient)
+        measure = `strMeasure${i}`
+        if(arr[ingredient]){
+            ingredients.push(arr[ingredient])
+            measurements.push(arr[measure])        
+        }
+    } 
+    var ins = document.createElement('p');
+    ins.textContent = instructions;
+    ins.setAttribute("id","ins")
+    ins.setAttribute("class","text-base")
+    
+    var ingr = document.createElement('p');
+    ingr.setAttribute("id","ingr")
+    ins.setAttribute("class","text-base")
+    for(var i = 0; i < ingredients.length; i++){
+        if(measurements[i] == null){
+            fullIngredients += `${ingredients[i].trim()}, `
+        }else{
+        fullIngredients += `${ingredients[i].trim()} (${measurements[i].trim()}), `}
+
     }
+    fullIngredients = fullIngredients.slice(0,-2)
+    ingr.textContent = fullIngredients;
+    recipeDiv.appendChild(ingr)
+    recipeDiv.appendChild(ins);
+
+
 
 }
 
@@ -194,8 +217,6 @@ function addMovieTitle(movies){
         btn.addEventListener("click", getMovieInfo)
         movieList.appendChild(li)
         li.appendChild(btn)
-
-
     }
   }
 
@@ -222,6 +243,10 @@ function clearDrink(){
     if (movieTitle){movieTitle.remove()}
     var movieImg = document.querySelector('#movieImg');
     if (movieImg){movieImg.remove()}
+    var ins = document.querySelector('#ins');
+    if (ins){ins.remove()}
+    var ingr = document.querySelector('#ingr');
+    if (ingr){ingr.remove()}
 
 }
 

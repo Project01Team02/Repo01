@@ -7,8 +7,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./style.css" />
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <h1 id="banner">
@@ -29,22 +28,24 @@
     </p>
     <div class="container-div">
       <form id="movieForm">
-        <div id="formDiv">
-          <label for="MovieInput" id="title">Movie Title</label>
+        <div id="formDiv" >
+          <label for="MovieInput" id="title" class="mb-8">What are we watching?</label>
           <input
             type="text"
             id="movieInput"
+            class="mb-8 text-black rounded-md"
             placeholder="Enter your movie title..."
           />
-          <button type="submit" id="submit">Submit</button>
+          <button type="submit" id="submit" class="text-lg">Submit</button>
         </div>
       </form>
       <div id="results">
         <div id="movieDiv"></div>
         <div id="drinkDiv"></div>
       </div>
-      <div id="searchHistoryTitleDiv">
-        <h4>Your previous movie searches:</h4>
+      <div id="recipeDiv"></div>
+      <div id="searchHistoryTitleDiv" class="mb-8">
+        <p class="text-3xl">Your previous movie searches (click the name to search again):</p>
       </div>
       <div id="searchHistoryDiv"></div>
     </div>

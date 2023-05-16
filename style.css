@@ -27,7 +27,7 @@ body {
       text-transform: uppercase;
       font-family: 'Gambetta', serif;
       font-style: oblique;
-      border:10px rgb(247, 219, 149);
+      border:10px rgb(243, 230, 199);
       border-style: dotted ;
       border-radius: 5px;
       box-shadow: 3px 3px 3px gold,
@@ -73,7 +73,7 @@ img{
 .topnav{
   background-color: #000;
   opacity: 0.8;
-  width: 33%;
+  width: 20%;
   word-spacing: 50px;
   text-align:center;
   font-family: 'Gambetta', serif;
@@ -118,7 +118,7 @@ img{
   color:#FFF;
     margin-top: em;
     width: 10em;
-    height: 3em;
+    height: 2em;
     margin-left: auto;
     margin-right: auto;
     vertical-align: center;
@@ -157,39 +157,69 @@ footer{
   font-size: 1.25em;
 }
 #movieList {
+  border: 4px inset white;
+  font-size: 150%;
+  padding: 2em;
   list-style: none;
   color: #fff;
-  margin-bottom: 10px;
- 
+  margin-bottom: 2em;
 }
-#drinkTitle {
+#drinkTitle, #movieTitle {
     color:#FFF;
     text-align: center;
-}
-#movieTitle {
-  color: #FFF;
-  text-align: center;
+    font-size: 150%;
 }
 #drinkImg {
   margin-left: 1em;
+  height: 300px;
   /* height: fit-content; */
 }
 #movieImg {
   margin-left: auto;
-  width: 150px;
+  height: 300px;
 }
 #searchHistoryTitleDiv {
   margin-left:auto;
   margin-right: auto;
   vertical-align: center;
 }
-#searchHistoryDiv button {
-  display: block;
-  font-size:large;
-  margin-bottom: 1em;
-  margin-left:auto;
+#searchHistoryDiv{
+  margin-left: auto;
   margin-right: auto;
   vertical-align: center;
+}
+#searchHistoryDiv button {
+  display: inline;
+  font-size: 1.5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-right: .5em;
+  margin-bottom: 1em;
+  border: 3px inset white;
+  border-radius: 5px;
+}
+#searchHistoryDiv button:hover {
+  background-color: #FFF;
+  color: rgb(73, 83, 94);
+}
+#recipeDiv {
+  padding: 1em;
+  margin: 2em 2em;
+}
+
+#ins.text-base{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  vertical-align: center;
+  font-size: 1.5em;
+  text-align: center;
+}
+#ingr {
+  font-size: 150%;
+  text-align: center;
+  margin-bottom: 2em;
 }
 .glass-1 {
     animation-name: wave-animation2;
