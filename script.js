@@ -131,6 +131,7 @@ function getDrink(genre){
             drinkDiv.appendChild(desc);
             var drinkLink = document.createElement('a');
             drinkLink.setAttribute("id","drinkLink");
+            // getDetails(data)
             drinkLink.setAttribute("href",`https://www.thecocktaildb.com/drink/${data.drinks[0].idDrink}`)
             drinkLink.setAttribute("target",`_blank`)
             drinkLink.textContent = "Click the link for full instuctions.";
@@ -141,6 +142,15 @@ function getDrink(genre){
     })
 }
 
+function getDetails(data){
+    arr = data.drinks;
+    ingredient = `strIngredient`
+    for(var i = 1; i <= 15; i++){
+        ingredient = `strIngredient${i}`
+        console.log(ingredient)
+    }
+
+}
 
 function getMovie(event) {
     event.preventDefault();
