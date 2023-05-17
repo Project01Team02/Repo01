@@ -255,11 +255,10 @@ footer{
   vertical-align: center;
 }
 #searchHistoryDiv button {
-  width: 15%;
   display: inline;
-  font-size: 150%;
+  font-size: 2em;
   padding-left: .5em;
-  padding-right: em;
+  padding-right: .5em;
   margin-right: .5em;
   margin-bottom: 1em;
   border: 3px inset rgb(179, 181, 182);
