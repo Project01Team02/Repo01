@@ -73,7 +73,7 @@ img{
 .topnav{
   background-color: #000;
   opacity: 0.8;
-  width: 20%;
+  width: 30%;
   word-spacing: 50px;
   text-align:center;
   font-family: 'Gambetta', serif;
@@ -172,9 +172,9 @@ footer{
 #drinkDiv {
   background-color: #000;
   width: 50%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-left: auto;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   vertical-align: center;
  border: 4px inset rgb(250, 79, 107);
  border-radius: 10px 10px 5px 5px;
@@ -182,8 +182,9 @@ footer{
 #movieDiv {
   background-color: #000;
   width: 50%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   vertical-align: center;
   border: 4px inset gold;
   border-radius: 10px 10px 5px 5px;
@@ -233,14 +234,20 @@ footer{
   text-align: center;
 }
 #drinkImg {
-  width: 45%;
+  width: 200px;
   height: 300px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1%;
   /* height: fit-content; */
 }
 #movieImg {
-  width: 45%;
+  width: 200px;
   height: 300px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
   padding:1%;
 }
 #searchHistoryTitleDiv {
@@ -271,13 +278,13 @@ footer{
 }
 #recipeDiv {
   width: 40%;
-  opacity: .5;
+  /* opacity: .5; */
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
   margin-bottom: 2em;
   vertical-align: center;
-  color: #FFF;
+  color: black;
   background-color: rgb(214, 224, 235);
   border: 4px rgb(187, 186, 184) inset;
   border-radius: 5px;
@@ -341,3 +348,4 @@ footer{
    90% { transform: rotate( -10.0deg) } 
    100% { transform: rotate( 0.0deg) }
   }
+
