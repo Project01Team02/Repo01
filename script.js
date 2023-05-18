@@ -42,7 +42,9 @@ function getMovieFromHistory(event) {
   var drinkDiv = document.querySelector("#drinkDiv");
   drinkDiv.style.display = "none";
   var recipeDiv = document.querySelector("#recipeDiv");
-  recipeDiv.style.display = "none";
+  if(recipeDiv != null){recipeDiv.remove();}
+  var plotDiv = document.querySelector("#plotDiv");
+  if(plotDiv != null){plotDiv.remove();}
   var movieHistoryName = event.target.textContent;
   console.log(movieHistoryName);
   var url = `https://www.omdbapi.com/?apikey=333546da&s=${movieHistoryName}&type=movie`;
@@ -191,7 +193,10 @@ function getDetails(data) {
   var measurements = [];
   var instructions = arr.strInstructions;
   var fullIngredients = "";
-  var recipeDiv = document.querySelector("#recipeDiv");
+  var recipeDiv = document.createElement("div");
+  recipeDiv.setAttribute("id", "recipeDiv")
+  var drinkDiv = document.querySelector("#drinkDiv");
+  drinkDiv.appendChild(recipeDiv)
   //added style display for hiding recipe div until it's called
   recipeDiv.style.display = "block";
   for (var i = 1; i <= 15; i++) {
@@ -231,7 +236,9 @@ function getMovie(event) {
   var drinkDiv = document.querySelector("#drinkDiv");
   drinkDiv.style.display = "none";
   var recipeDiv = document.querySelector("#recipeDiv");
-  recipeDiv.style.display = "none";
+  if(recipeDiv != null){recipeDiv.remove()}
+  var plotDiv = document.querySelector("#plotDiv");
+  if(plotDiv != null){plotDiv.remove()}
   var movieName = document.querySelector("#movieInput").value.trim();
   console.log(movieName);
 
@@ -241,7 +248,9 @@ function getMovie(event) {
   }
 
   var movies = readSearchesFromStorage();
-  movies.unshift(movieName);
+  if(!movies.includes(movieName)){
+    movies.unshift(movieName);
+  }
   saveSearchesToStorage(movies);
   searchHistoryDiv.innerHTML = "";
   addHistoryToPage();
@@ -346,6 +355,14 @@ function getMovieInfo(event) {
         movieImg.setAttribute("id", "movieImg");
         movieImg.setAttribute("src", `${data.Poster}`);
         movieDiv.appendChild(movieImg);
+        var plotDiv = document.createElement("div");
+        plotDiv.style.display = "block";
+        plotDiv.setAttribute("id", "plotDiv");
+        var plot = document.createElement("p");
+        plot.setAttribute("class", "plot")
+        plot.textContent = data.Plot;
+        movieDiv.appendChild(plotDiv);
+        plotDiv.appendChild(plot);
 
         var genres = data.Genre;
         var genresArray = genres.split(",");
