@@ -52,8 +52,8 @@ body {
 .topnav{
   background-color: #000;
   opacity: 0.8;
-  width: 20%;
-  word-spacing: 50px;
+  width: 40%;
+  word-spacing: 20px;
   text-align:center;
   font-family: 'Gambetta', serif;
   border-radius: 5px;
@@ -62,14 +62,13 @@ body {
   padding: 5px;
   margin-left: auto;
   margin-right: auto;
-  vertical-align: center;
   overflow: auto;
 }
 
 #summary {
   font-family: 'Gambetta', serif;
   padding-top:50px;
-  width:50%;
+  width:90%;
   text-align:center;
   font-size: 200%;
   margin: auto;
@@ -82,6 +81,7 @@ table.movie_drink_rec {
  margin:auto;
  width: 65%;
  font-size:150%;
+ margin-bottom:10vh;
 }
 
 footer{
@@ -91,9 +91,9 @@ footer{
   font-family: 'Gambetta', serif;
   font-weight: bold;
   font-style: oblique;
-  font-size:1.2vw;
+  font-size:1em;
   text-align:center;
-  margin-top:15vh;
+  margin-top:5vh;
   padding: 50px;
 }
 .glass-1 {
@@ -111,6 +111,17 @@ footer{
   transform-origin: 70% 70%;
   display: inline-block;
 }
+
+@media screen and (max-width: 768px){
+  #summary{
+    width:90%;
+    font-size: 125%;
+  } 
+  table.movie_drink_rec{
+    width: 90%;
+  }
+}
+
 @keyframes wave-animation1 {
   0% { transform: rotate( 0.0deg) }
  10% { transform: rotate( 14.0deg) }
