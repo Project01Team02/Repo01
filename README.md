@@ -18,10 +18,10 @@ We provide the drink ingredients and a step-by-step recipe on how to make the dr
 In the about page, you can find out the developers' favorite movie and drink pairing. In the resources page, it mirrors an open source page by sharing what APIs were used and gives depth to how big our storage is.  
 
 # Visuals
- ![Screenshot of movie mixers](./images/mm_homepage.PNG)
-  ![Screenshot of movie mixers](./images/mm_search.PNG)
+ ![Screenshot of movie mixers](./images/mm_homepage.PNG) This is the homepage.
+  ![Screenshot of movie mixers](./images/mm_search.PNG) This is the search bar to search for a movie.
  ![Screenshot of movie mixers](./images/mm_results.PNG) This is a screenshot of what it looks like when you successfully matched a drink and a movie together. It shows the recipe too! 
- ![Screenshot of movie mixers](./images/mm_history.PNG)
+ ![Screenshot of movie mixers](./images/mm_history.PNG) This shows previous searches.
 # Installation
 - To launch the deployed application, click here: https://project01team02.github.io/movie-mixers/.
 <br>
