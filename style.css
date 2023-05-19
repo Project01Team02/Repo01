@@ -88,8 +88,14 @@ a{
     margin-top: 1em;
 }
 #title {
+  width:60%;
+  background-color: #000;
+  opacity: .6;
   display: block;
+  border-radius: 5px;
     margin-top: .5em;
+    margin-left: auto;
+    margin-right: auto;
     color: #FFF;
     font-size: 3lvb;
 }
@@ -99,6 +105,7 @@ a{
     line-height: 1;
     width: 25em;
     height: 2.25em;
+    border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
     vertical-align: center;
