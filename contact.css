@@ -1,4 +1,7 @@
 body {
+  background-image: url(images/annie-spratt-sM1Cfpvlk6o-crop-unsplash.jpg);
+  background-size: cover;
+  background-repeat:no-repeat;
     background-color: rgb(73, 83, 94);
     font-family: 'Gambetta', serif;
     color: #fff;
@@ -66,19 +69,27 @@ body {
 }
 
 #summary {
+  background-color: #000;
+  opacity: 0.8;
   font-family: 'Gambetta', serif;
   padding-top:50px;
   width:90%;
+  border: 1px solid #FFF;
   text-align:center;
   font-size: 200%;
   margin: auto;
 }
 
 table.movie_drink_rec {
+background-color: #000;
+opacity: 0.8;
  color:rgb(255, 255, 255);
  text-align:center;
  border: 6px rgb(32, 31, 31) solid;
- margin:auto;
+ margin-left:auto;
+ margin-right:auto;
+ margin-top: 2em;
+
  width: 65%;
  font-size:150%;
  margin-bottom:10vh;
