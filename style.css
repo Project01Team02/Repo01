@@ -1,6 +1,9 @@
 body {
+  height: 100%;
   background-image: url(images/theater\ background.jpg);
   background-repeat: space;
+  background-size: cover;
+  background-position: center;
     background-color: rgb(73, 83, 94);
     font-family: 'Gambetta', serif;
     color: #FFF;
